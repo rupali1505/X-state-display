@@ -10,13 +10,7 @@ const CountrySelector = ()=>{
    const[selectCity, setSelectCity] = useState('')
     
    
-//    const fetchData = (url='')=>{
-//         fetch(url)
-//          .then(data=>data.json())
-//          .then((data)=>setCountry(data))
-//          .catch((error)=>console.error("fetching error:",error))
 
-//     }
 useEffect(()=>{
       let url =  "https://crio-location-selector.onrender.com/countries";       
         fetch(url)
@@ -90,7 +84,7 @@ useEffect(()=>{
                     <option key={item} value={item}>{item}</option>
                 ))}
             </select>
-            {selectCity? (<h2>You selected {selectCountry}, {selectState} , {selectCity}.</h2>)
+            {selectCity? (<h2>You selected {selectCity}, {selectState}, {selectCountry} </h2>)
             :(null)}
             
         </div>
